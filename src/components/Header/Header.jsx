@@ -13,7 +13,7 @@ function Header() {
 
         {/* Left - Logo */}
         <div className="text-2xl font-bold text-white">
-          <Link to="/">Yapper<span className="text-[#33FFDD]">HUB</span></Link>
+          <Link to="/">Yappers<span className="text-[#33FFDD]">HUB</span></Link>
         </div>
 
         {/* Center - Nav (desktop only) */}

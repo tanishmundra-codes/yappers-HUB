@@ -53,7 +53,7 @@ function Home() {
           Built for the Kaito Community
         </div>
         <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-          Welcome to Yapper<span className="text-[#33FFDD]">HUB</span>
+          Welcome to Yappers<span className="text-[#33FFDD]">HUB</span>
         </h1>
         <p className="text-[#D1D5DB] text-lg md:text-xl leading-relaxed">
           Discover all the essential tools and utilities curated<br />

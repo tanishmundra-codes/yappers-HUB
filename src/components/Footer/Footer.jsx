@@ -7,7 +7,7 @@ function Footer() {
 
         {/* Logo */}
         <div className="text-2xl font-bold text-white mb-4">
-          Yapper<span className="text-[#33FFDD]">HUB</span>
+          Yappers<span className="text-[#33FFDD]">HUB</span>
         </div>
 
         {/* Contact Me */}
@@ -35,7 +35,7 @@ function Footer() {
 
         {/* Copyright */}
         <div className="text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} YapperHUB. All rights reserved.
+          &copy; {new Date().getFullYear()} YappersHUB. All rights reserved.
         </div>
       </div>
     </footer>
