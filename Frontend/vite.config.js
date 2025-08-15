@@ -6,4 +6,9 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/yappers-HUB/', 
   plugins: [react(), tailwindcss()],
+  server: {
+    proxy: {
+      '/signup' : "http://localhost:8000",
+    },
+  },
 })

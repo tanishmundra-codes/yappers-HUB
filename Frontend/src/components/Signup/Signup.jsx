@@ -7,27 +7,25 @@ const SignUp = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    
+
     try {
-      // Replace with your actual API endpoint
-      const response = await fetch('http://localhost:5000/signup', {
+      const response = await fetch('/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         credentials: 'include',
         body: JSON.stringify({
-          username: name,
+          username: name, // backend expects 'username'
           email,
           password
         })
       });
 
       const data = await response.json();
-      
+
       if (response.ok) {
         alert('Signup successful!');
-        // Redirect to homepage
         window.location.href = '/';
       } else {
         throw new Error(data.message || 'Signup failed');
@@ -39,17 +37,17 @@ const SignUp = () => {
   };
 
   const handleLogin = () => {
-    // Add your login navigation logic here
     console.log('Navigate to login');
   };
 
   return (
     <div 
       className="min-h-screen flex items-center justify-center p-5"
-      style={{backgroundColor: '#0D0F13'}}
+      style={{ backgroundColor: '#0D0F13' }}
     >
       <div className="bg-white rounded-lg p-12 w-full max-w-md shadow-2xl">
-        {/* Title with underline */}
+        
+        {/* Title */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-semibold text-black-900 mb-3">
             Sign Up
@@ -58,7 +56,7 @@ const SignUp = () => {
         </div>
 
         {/* Form */}
-        <div onSubmit={handleSignUp} className="space-y-6">
+        <form onSubmit={handleSignUp} className="space-y-6">
           {/* Name Input */}
           <div className="flex flex-col">
             <input
@@ -95,11 +93,11 @@ const SignUp = () => {
             />
           </div>
 
-          {/* Button Group */}
+          {/* Buttons */}
           <div className="flex gap-4 mt-8 sm:flex-row flex-col">
             <button
-              onClick={handleSignUp}
-              className="flex-1 px-6 py-4 bg-[#33FFDD] text-black font-semibold rounded-full transition-all duration-200 hover:bg-blue-800 hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-opacity-50"
+              type="submit"
+              className="flex-1 px-6 py-4 bg-[#33FFDD] text-black font-semibold rounded-full transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-opacity-50"
             >
               Sign Up
             </button>
@@ -112,7 +110,8 @@ const SignUp = () => {
               Login
             </button>
           </div>
-        </div>
+        </form>
+
       </div>
     </div>
   );
